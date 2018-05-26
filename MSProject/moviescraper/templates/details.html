@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Movie Details</title>
+		<!--Load static files from application static directory-->
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static "moviescraper/css/materialize.css" %}">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m8 l8 offset-m2 offset-l2">
+					<div class="card">
+						<div class="card-content">
+						<!--Populate movie details with context from view-->
+							<span class="card-title">{{ this_movie.movie_name }}</span>
+							<p>Movie Length: {{this_movie.movie_length}}</p>
+							<br>
+							<p>{{this_movie.movie_times}}</p>
+						</div>
+						<div class="card-action">
+							<a href="../">Return</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
